@@ -1,0 +1,136 @@
+@charset "utf-8";
+@import url(//fonts.googleapis.com/earlyaccess/notosanskr.css);
+@import './common';
+@import url("https://cdn.jsdelivr.net/gh/moonspam/NanumBarunGothic@1.0/nanumbarungothicsubset.css");
+
+@mixin wrap {
+    width : 50%;
+}
+
+.error-text {
+    color: $red;
+}
+
+.input-wrap {
+    @include wrap;
+    position: relative;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    input[type="text"],
+    input[type="password"] { 
+      // input-label박스 사이즈
+      padding: 2px 60px 0 105px;
+      box-sizing: border-box;
+      // 평상시 박스 border
+      border: 1px solid rgb(150, 150, 150);
+      border-radius: 3px;
+      &.error {
+        border-radius: 3;
+        border: 1px solid $red;
+      }
+      &.complete {
+        border-radius: 3;
+        border: 1px solid $myColor;
+      }
+      &.disabled {
+        background: #eee;
+        color:#333;
+        &:hover, &:focus {
+          border:1px solid #000;
+        }
+      }
+    }
+    label {
+      position: absolute;
+      left: 15px;
+      top : 20px;
+      color: #000;
+      font-size: 15px;
+      &.right {
+        // margin-left: 84%;
+        border: none;
+        font-size: 15px;
+        font-weight: 400;
+        background-color: transparent;
+        outline: none;
+        cursor: pointer;
+      }
+    }
+    .error-text {
+      @include wrap;
+      color: $red;
+      margin-top: 3px;
+      margin-left: 9px;
+    }
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* style the container */
+.snsLogin {
+  position: relative;
+  border-radius: 5px;
+  // background-color: #f2f2f2;
+  padding: 20px 0 30px 0;
+  text-align: center;
+} 
+
+/* style inputs and link buttons */
+input,
+.btn {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 4px;
+  margin: 5px 0;
+  opacity: 0.7;
+  display: inline-block;
+  font-size: 17px;
+  line-height: 20px;
+  text-decoration: none; /* remove underline from anchors */
+}
+
+.snsLogin img {
+  opacity: 0.7;
+  width: 60px;
+  height: 60px;
+  margin:auto;
+  margin-right: 20px;
+}
+
+.snsLogin img:hover {
+  opacity: 1;
+}
+
+.input-wrap {
+  margin: auto;
+  margin-top: 15px;
+}
+
+/*로그인 버튼*/
+.submit {
+  width: 50%;
+  margin: auto;
+  margin-top: 20px;
+}
+
+.container {
+  height: 100%;
+}
+
+#logo {
+  width: 15%;
+  height: 15%;
+  display: block;
+  margin-top: 5%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.user p {
+  text-align: center;
+  font-size: 36px;
+  font-weight: bold;
+}
